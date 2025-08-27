@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mensaje para Dally</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Black+Jack&display=swap');
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f8aecc;
+            flex-direction: column;
+        }
+        .container {
+            text-align: center;
+            width: 90%;
+            max-width: 400px;
+            padding: 20px;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+        }
+        #startScreen {
+             background-color: #f8aecc;
+            background-size: 100% 100%;
+            min-height: 100vh;
+        }
+        #songScreen {
+            background-color: #f8aecc;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            background-color: #f0437c;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            color: white;
+        }
+        .hidden {
+            display: none;
+        }
+        .song, .letter {
+            margin-top: 20px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            text-align: left;
+            background-color: #ffffff;
+        }
+
+        .h1 {
+            font-family: 'Black Jack', cursive;
+            font-size: 2.5rem;
+            color: #ffffff;
+            position: relative;
+        }
+
+        .mi-parrafo-musica{
+        color: rgb(131, 2, 2); 
+         }
+        
+        img {
+            max-width: 70%; /* Imagen mucho más pequeña */
+            height: auto;
+            margin: 20px auto; /* Centrado vertical y horizontal */
+        }
+        audio {
+            width: 100%;
+            max-width: 300px;
+            margin: 10px auto; /* Centrado horizontal */
+        }
+        .custom-title {
+            font-family: 'Black Jack', cursive;
+            font-size: 2.5rem;
+            color: #ffffff;
+            position: relative;
+        }
+        .heart-outline-no-fill {
+            position: absolute;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 60px;
+            border: 2px solid #8b0000;
+            border-radius: 50%;
+            clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+            background: transparent;
+        }
+        /* Media queries para ajustar según el tamaño de pantalla */
+        @media (min-width: 600px) {
+            .container {
+                max-width: 500px;
+            }
+            .button {
+                font-size: 1.5rem;
+            }
+            .custom-title {
+                font-size: 3rem;
+            }
+            .heart-outline-no-fill {
+                width: 70px;
+                height: 70px;
+            }
+        }
+        @media (min-width: 900px) {
+            .container {
+                max-width: 600px;
+            }
+            .button {
+                font-size: 1.8rem;
+            }
+            .custom-title {
+                font-size: 3.5rem;
+            }
+            .heart-outline-no-fill {
+                width: 80px;
+                height: 80px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="startScreen">
+        <!-- Pantalla inicial con saludo y botón -->
+        <div class="heart-outline-no-fill"></div>
+        <h1 class="custom-title"> ❤️ Para Dally ❤️</h1>
+        <p>Algo especial te esta esperando...</p>
+        <button class="button" onclick="showNextScreen()">Click aquí ❤️</button>
+    </div>
+    <div class="container hidden" id="songScreen">
+        <!-- Pantalla de canción con nombre, reproductor y imagen -->
+        <h1 class="custom-title">Mis Ojitos Lindos❤️</h1>
+        <h4>Me encanto como el destino te puso en mi camino🌎</h4>
+        <audio controls autoplay>
+            <source src="Just The Way You Are.mp3" type="audio/mpeg">
+            Tu navegador no soporta el elemento de audio.
+        </audio>
+        <img src="Imagen1.jpg" alt="Imagen de Pareja">
+        <div class="song">
+            <p>Mis ojitos lindos,</p>
+
+            <p>La verdad es que no se como empezar, ni sé como es que estoy haciendo esto jajaja😅.
+               pero quiero empezar esto agradeciendote por todo🥰, quizas te pregunte ¿porqué te agradesco?🤔
+               y quizas tu respuesta sea "Gracias a ti"😊, aunque la verdad el que tiene que agradecer por
+               todo aquí soy yo no te imaginas la felicidad que me causas.
+            </p>
+
+            <p>Disfrutar tu compañía es uno de los regalos más bonitos que la vida me ha dado. 
+               porque cada minuto a tu lado es un suspiro de felicidad y tranquilidad ⏳. 
+               No importa lo que hagas, porque el simple hecho de verte caminar ya reflejas una
+               sonrisa en mi rostro, hasta el punto que solo necesito escuchar una fraccion de tu 
+               voz, para saber que eres tú, para saber que te encuentras en ese lugar, o incluso en
+               la distancia poder diferenciar si eres realmente tú💕. 
+            </p>
+
+            <p>Eres una gran persona en todos los sentidos de la vida, realmente muy estoy agradecido,
+               agradecido con la vida, agradecido contigo por a ver compartido un poco de tu tiempo conmigo⏳,
+               y gracias por confiar en mi😊, por las risas😅, los besos😘, los abrazos🙅‍♂️, atesoro cada uno
+               de todos estos recuerdos en el fondo de mi corazón. porque sin pensarlo te volviste una persona
+               super importante en mi vida💖.
+            </p>
+
+            <p>Y pues como no hablar de tus ojos, tus ojos... ahh, tus ojos son mi pasión y mi refugio 🌟.
+               Me pierdo en ellos sin querer buscar salida, tienen un brillo único que no puedo evitar mirarlos
+               al principio no los veía mucho porque me terminada arrochando pero después .... ahhh, me gusta verte
+               o me gusta como te pones cuando te veo, como te sonrojas, como cambia tu semblante💖.
+               Tus ojos tienen esa magia de los luceros que pueden hacer que cada día tenga un cambio para bien.
+            </p>
+
+            <p>Quizás llegue tarde a tu vida, o quizás solo llegue en el momento preciso 
+                para poder ver la maravillosa persona que eres... 
+                y para darme cuenta de lo afortunado que soy de tenerte(Bueno no te tengo,
+                pero si tengo tu amistad, que aunque no es igual a tener tu amor).
+                Solo quiero que sepas que aquí estoy, admirándote con sinceridad desde la distancia, 
+                deseándote siempre felicidad y que sigas siendo esa persona increíble y maravillosa.
+            </p>
+
+            <p class="mi-parrafo-musica"><b>Es una fraccion de una musica que me gusta mucho y espero te guste</b></p>
+
+            <p>
+                <center>Oh, sus ojos, sus ojos🎶 </center>
+                <center>Hacen que las estrellas parezcan no brillar🎶</center>
+                <center>Su cabello, su cabello🎶 </center>
+                <center>Cae perfectamente sin que ella lo intente🎶</center>
+                <center>Ella es tan hermosa🎶</center>
+                <center>Y se lo digo todos los días🎶</center>
+            </p>
+
+            <p>y para terminar solo quiero que sepas que se siente bien estar enamorado de ti,
+                quisiera decirte que me muero por un beso tuyo, por un abrazo tuyo o por un mensaje
+                tuyo que venia con mucho cariño, que cuando te veo muero por correr y abrazarte
+                pero tambien sé que no se puede, que nada es igual antes, que no se puede devolver el tiempo, y que tampoco
+                nada de eso volvera a pasar, solo me queda guardar cada momento, atesorandolo en 
+                lo mas profundo de mi corazón☺️.
+            </p>
+
+            <p>
+                <center>“Tus ojos son estrellas 🤩</center>
+                <center>que guían mi camino 👉👈</center>
+                <center>tu sonrisa, la melodía 😁</center>
+                <center>que alegra mi destino💘”</center>
+            </p>
+
+           <p><strong>Att:</strong></p>
+
+           <p><center><strong>Un Chico enamorado💕</strong></center></p>
+
+        </div>
+    </div>
+
+    <script>
+        // Función para mostrar la siguiente pantalla al hacer click
+        function showNextScreen() {
+            document.getElementById('startScreen').classList.add('hidden');
+            document.getElementById('songScreen').classList.remove('hidden');
+            document.querySelector('audio').play(); // Inicia la reproducción al cargar la pantalla
+        }
+
+        // Simular deslizar hacia abajo para mostrar la carta solo en songScreen
+        let startY;
+        document.getElementById('songScreen').addEventListener('touchstart', e => {
+            startY = e.touches[0].clientY;
+        });
+        document.getElementById('songScreen').addEventListener('touchmove', e => {
+            let endY = e.touches[0].clientY;
+            if (startY - endY > 100) { // Umbral de deslizamiento hacia abajo
+                document.getElementById('songScreen').classList.add('hidden');
+                document.getElementById('letterScreen').classList.remove('hidden');
+            }
+        });
+    </script>
+</body>
+</html>
